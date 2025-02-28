@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "I have no idea what im doing",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "queen_eye",
+      "delays": [
+        [
+          1.0,
+          1.0
+        ]
+      ]
+    }
+  ]
+}

@@ -71,6 +71,7 @@
     - DoorXenoResin
     - XenoStickyResin
     - XenoFastResin
+    - XenoWeedsSource
     canOrderConstruction:
     - HiveCoreXenoConstructionNode
   - type: XenoDevour
@@ -213,6 +214,7 @@
   - type: ManageHive
   - type: HiveLeaderGranter
   - type: XenoHeal
+  - type: XenoQueenEye
   - type: StunOnExplosionReceived
     weak: false
   - type: XenoSpit
@@ -231,3 +233,27 @@
   id: XenoLeaderPheromoneRelay
   components:
   - type: XenoPheromones
+
+# Hologram projection that the Queen's eye tracks.
+- type: entity
+  parent:
+  - Incorporeal
+  - BaseMob
+  id: RMCXenoQueenEyeHolo
+  name: Queen Eye
+  description: The Queen's viewer.
+  categories: [ HideSpawnMenu ]
+  suffix: DO NOT MAP
+  components:
+  - type: NoFTL
+  - type: WarpPoint
+    follow: true
+  - type: Eye
+    pvsScale: 1.5
+  - type: Visibility
+    layer: 2
+  - type: Sprite
+    sprite: _RMC14/Mobs/Xenonids/Queen/eye.rsi
+    layers:
+    - state: queen_eye
+      shader: unshaded

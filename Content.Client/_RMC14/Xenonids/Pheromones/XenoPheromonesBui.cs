@@ -74,7 +74,8 @@ public sealed class XenoPheromonesBui : BoundUserInterface
 
         var vpSize = _displayManager.ScreenSize;
         var pos = _inputManager.MouseScreenPosition.Position / vpSize;
-        if (_player.LocalEntity is { } ent)
+        if (EntMan.GetComponent<EyeComponent>(Owner).Target == null &&
+            _player.LocalEntity is { } ent)
             pos = _eye.WorldToScreen(_transform.GetMapCoordinates(ent).Position) / vpSize;
 
         _xenoPheromonesMenu.OpenCenteredAt(pos);
